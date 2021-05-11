@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import { useSelector } from "react-redux";
+import Navbar from "./components/navbar/Navbar";
+import GlobalStyles from "./globalStyles/GlobalStyles";
+import ArtistPage from "./views/artistPage/ArtistPage";
+import HomePage from "./views/homePage/HomePage";
 
 function App() {
+  const selectedAuthor = useSelector((state) => state.author);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Navbar />
+      {selectedAuthor.length !== 0 ? (
+        <ArtistPage />
+      ) : (
+        <HomePage test="Witaj w MusicFinderze" />
+      )}
+    </>
   );
 }
 
