@@ -10,15 +10,14 @@ import {
   HeroSection,
 } from "./HomePageStyles";
 
-const HomePage = ({ test }) => {
+const HomePage = ({ heroText }) => {
   return (
-    <MainPage data-testid="test-one">
+    <MainPage data-testid="homePage-test">
       <LeftSection>
         <HeroSection>
-          <h1>{test}</h1>
-          {/* zapytac jak to inaczej moze wygladac */}
+          <h1>{heroText}</h1>
 
-          <p>Cała twoja ulubiona muzyka na wyciągnięcie reki</p>
+          <p>Cała twoja ulubiona muzyka na wyciągnięcie ręki</p>
           <p>Potrzebujesz więcej piosenek swojego ulubionego wykonawcy?</p>
           <p>Znasz tytuł piosenki albo albumu ale nie wiesz kto to śpiewa?</p>
           <h4>U nas znajdziesz pytania na wszystkie te odpowiedzi.</h4>
