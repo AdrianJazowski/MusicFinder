@@ -15,7 +15,7 @@ function App() {
       {selectedAuthor.length !== 0 ? (
         <ArtistPage />
       ) : (
-        <HomePage test="Witaj w MusicFinderze" />
+        <HomePage heroText="Witaj w MusicFinderze" />
       )}
     </>
   );
