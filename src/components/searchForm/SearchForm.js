@@ -17,8 +17,9 @@ const SearchForm = () => {
   const handleGetDataFromApi = (e) => {
     e.preventDefault();
     const phraseFromInputToReducer = e.target.searchInput.value;
+    const currentPhraseToApi = e.target.searchInput.value.split(" ").join("+");
     dispatch(putAuthorToStore(phraseFromInputToReducer));
-    dispatch(getDataFromApiByAuthor(phraseFromInputToReducer));
+    dispatch(getDataFromApiByAuthor(currentPhraseToApi));
 
     e.target.reset();
   };

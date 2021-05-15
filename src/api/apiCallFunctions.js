@@ -24,7 +24,7 @@ export const getDataFromApiByAuthor = (currentPhraseToApi) => {
         });
         dispatch(getDataFromApiByPhrase(albumCollections));
       })
-      .catch(() => dispatch(getDataFromApiByPhrase([])));
+      .catch((err) => console.log(err));
   };
 };
 
@@ -45,9 +45,6 @@ export const getDataFromApiByOneAlbum = (collectionId) => {
         dispatch(getDataFromApiAboutOneAlbum(album));
         dispatch(putDataAboutAlbumArtist(albumInformation));
       })
-      .catch(() => {
-        dispatch(getDataFromApiAboutOneAlbum([]));
-        dispatch(putDataAboutAlbumArtist([]));
-      });
+      .catch((err) => console.log(err));
   };
 };
