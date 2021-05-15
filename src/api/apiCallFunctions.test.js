@@ -5,6 +5,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { cleanup } from "@testing-library/react";
 import * as axios from "axios";
 import { getDataFromApiByAuthor } from "./apiCallFunctions";
+import { convertSongDuration } from "./helperFunctions";
 
 describe("test apiCallFunctions", () => {
   afterEach(cleanup);
@@ -19,5 +20,10 @@ describe("test apiCallFunctions", () => {
     });
 
     expect(axios.get).toHaveBeenCalledTimes(0);
+  });
+  it("test correctness helper function", () => {
+    const time = 8000;
+
+    expect(convertSongDuration(time)).toBe("0:08");
   });
 });
