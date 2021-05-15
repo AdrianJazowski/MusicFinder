@@ -4,11 +4,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { PopupListWrapper, Song } from "./PopupListStyles";
 
-const PopupList = () => {
-  const selectedAlbum = useSelector((state) => state.album);
-
+const PopupList = ({ selectedAlbum }) => {
   return (
-    <PopupListWrapper>
+    <PopupListWrapper data-testid="popupList-test">
       {selectedAlbum.map((song) => {
         const { trackName, trackTime } = song;
         return (
