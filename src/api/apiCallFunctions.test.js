@@ -4,7 +4,6 @@ import "@testing-library/jest-dom/extend-expect";
 
 import { cleanup } from "@testing-library/react";
 import * as axios from "axios";
-import { getDataFromApiByAuthor } from "./apiCallFunctions";
 import { convertSongDuration } from "./helperFunctions";
 
 describe("test apiCallFunctions", () => {

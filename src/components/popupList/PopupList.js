@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import { useSelector } from "react-redux";
 import { PopupListWrapper, Song } from "./PopupListStyles";
 
 const PopupList = ({ selectedAlbum }) => {
