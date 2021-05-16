@@ -4,8 +4,6 @@
 
 A todo list project using recoil.js technologies for state management and theme ui for component styling. Fetch used for api calls.
 
-### Live demo: 
-
 ## Main Tech stack:
 
 - React.js,
